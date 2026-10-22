@@ -1,0 +1,9 @@
+# Copy to config.yaml and fill in local paths.
+sim:
+  enabled: true
+  backend: seed_tts
+  model: wavlm_large
+  checkpoint: /path/to/wavlm_large_finetune.pth
+  ssl_ckpt: /path/to/wavlm_large.pt
+  unispeech_dir: /path/to/UniSpeech/downstreams/speaker_verification
+  device: cuda:0

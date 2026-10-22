@@ -1,0 +1,10 @@
+# main-sim speaker embedding (Seed-TTS WavLM-large SV)
+# For a template without machine-specific paths, see config.example.yaml
+sim:
+  enabled: true
+  backend: seed_tts
+  model: wavlm_large
+  checkpoint: /mnt/node06_tmpdata0/hyzhang/code/seed-tts-eval/wavlm_large_finetune/wavlm_large_finetune.pth
+  ssl_ckpt: /mnt/node06_tmpdata0/hyzhang/code/seed-tts-eval/wavlm/wavlm_large.pt
+  unispeech_dir: /mnt/node06_tmpdata0/hyzhang/code/seed-tts-eval/thirdparty/UniSpeech/downstreams/speaker_verification
+  device: cuda:0

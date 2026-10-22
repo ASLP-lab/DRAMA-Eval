@@ -1,0 +1,15 @@
+﻿# 忽略所有大音频文件 (由 HF 统一管理)
+*.wav
+*.flac
+*.mp3
+*.ogg
+
+# 忽略本地运行产生的结果目录
+results/
+__pycache__/
+*.pyc
+
+# 系统文件
+.DS_Store
+*.zip
+*.tar.gz

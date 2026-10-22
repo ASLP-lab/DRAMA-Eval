@@ -1,0 +1,9 @@
+# WER / CER (zh≈char, en=word) via Qwen3-ASR + ForcedAligner
+wer:
+  mode: local
+  asr_model: Qwen/Qwen3-ASR-0.6B
+  forced_aligner_model: Qwen/Qwen3-ForcedAligner-0.6B
+  device: cuda:0
+  dtype: bfloat16
+  max_new_tokens: 256
+  max_batch_size: 1
