@@ -1,10 +1,5 @@
-<img width="627" height="627" alt="logo" src="https://github.com/user-attachments/assets/6992d6ba-923e-4b10-9f3f-df41c64080f5" />
-
-# DRAMA-Eval: A Benchmark for Context-Aware, Multi-Turn, Multi-Speaker Speech Generation
-
 <p align="center">
-  <!-- 请把下面 src="" 里的链接，替换为你刚才拖拽图片生成的那个 https://github.com/... 链接 -->
-  <img src="logo.png" alt="DRAMA-Eval Logo" width="250"/>
+  <img src="https://github.com/user-attachments/assets/6992d6ba-923e-4b10-9f3f-df41c64080f5" alt="DRAMA-Eval Logo" width="250"/>
 </p>
 
 <h1 align="center">DRAMA-Eval: A Benchmark for Context-Aware, Multi-Turn, Multi-Speaker Speech Generation</h1>
@@ -23,8 +18,6 @@
     <img src="https://img.shields.io/badge/Demo-Webpage-blue.svg" alt="Demo">
   </a>
 </p>
-
-
 
 **DRAMA-Eval** is a comprehensive bilingual (English & Chinese) benchmark designed to evaluate context-aware, multi-turn, and multi-speaker speech generation systems. By utilizing structured script contexts grounded in real-world audio, it offers a holistic evaluation framework covering objective, local, and global aspects of generation quality.
 
