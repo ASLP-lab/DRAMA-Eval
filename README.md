@@ -1,6 +1,5 @@
-<p align="center">
-  <img src="logo.png" alt="DRAMA-Eval Logo" width="200"/>
-</p>
+<img width="627" height="627" alt="logo" src="https://github.com/user-attachments/assets/6992d6ba-923e-4b10-9f3f-df41c64080f5" />
+
 # DRAMA-Eval: A Benchmark for Context-Aware, Multi-Turn, Multi-Speaker Speech Generation
 
 [!Paper [<sup>2</sup>](https://img.shields.io/badge/Paper-Arxiv-red.svg)](https://arxiv.org/abs/xxxx.xxxxx)
