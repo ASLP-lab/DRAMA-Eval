@@ -2,10 +2,28 @@
 
 # DRAMA-Eval: A Benchmark for Context-Aware, Multi-Turn, Multi-Speaker Speech Generation
 
-[!Paper [<sup>2</sup>](https://img.shields.io/badge/Paper-Arxiv-red.svg)](https://arxiv.org/abs/xxxx.xxxxx)
-[!Dataset [<sup>3</sup>](https://img.shields.io/badge/Dataset-HuggingFace-yellow.svg)](https://huggingface.co/datasets/ASLP-lab/DRAMA-Eval)
-[!Results [<sup>4</sup>](https://img.shields.io/badge/Results-HuggingFace-orange.svg)](https://huggingface.co/datasets/ASLP-lab/DRAMA-Eval-Results)
-[!Demo [<sup>5</sup>](https://img.shields.io/badge/Demo-Webpage-blue.svg)](https://ASLP-lab.github.io/DRAMA-Eval-Demo)
+<p align="center">
+  <!-- 请把下面 src="" 里的链接，替换为你刚才拖拽图片生成的那个 https://github.com/... 链接 -->
+  <img src="logo.png" alt="DRAMA-Eval Logo" width="250"/>
+</p>
+
+<h1 align="center">DRAMA-Eval: A Benchmark for Context-Aware, Multi-Turn, Multi-Speaker Speech Generation</h1>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/xxxx.xxxxx">
+    <img src="https://img.shields.io/badge/Paper-Arxiv-red.svg" alt="Paper">
+  </a>
+  <a href="https://huggingface.co/datasets/ASLP-lab/DRAMA-Eval">
+    <img src="https://img.shields.io/badge/Dataset-HuggingFace-yellow.svg" alt="Dataset">
+  </a>
+  <a href="https://huggingface.co/datasets/ASLP-lab/DRAMA-Eval-Results">
+    <img src="https://img.shields.io/badge/Results-HuggingFace-orange.svg" alt="Results">
+  </a>
+  <a href="https://ASLP-lab.github.io/DRAMA-Eval-Demo">
+    <img src="https://img.shields.io/badge/Demo-Webpage-blue.svg" alt="Demo">
+  </a>
+</p>
+
 
 
 **DRAMA-Eval** is a comprehensive bilingual (English & Chinese) benchmark designed to evaluate context-aware, multi-turn, and multi-speaker speech generation systems. By utilizing structured script contexts grounded in real-world audio, it offers a holistic evaluation framework covering objective, local, and global aspects of generation quality.
