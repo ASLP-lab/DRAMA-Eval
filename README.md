@@ -5,7 +5,7 @@
 <h1 align="center">DRAMA-Eval: A Benchmark for Context-Aware, Multi-Turn, Multi-Speaker Speech Generation</h1>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/xxxx.xxxxx">
+  <a href="https://arxiv.org/abs/2610.31796">
     <img src="https://img.shields.io/badge/Paper-Arxiv-red.svg" alt="Paper">
   </a>
   <a href="https://huggingface.co/datasets/ASLP-lab/DRAMA-Eval">
