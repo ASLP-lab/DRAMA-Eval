@@ -1,3 +1,6 @@
+
+
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6992d6ba-923e-4b10-9f3f-df41c64080f5" alt="DRAMA-Eval Logo" width="250"/>
 </p>
@@ -20,6 +23,10 @@
 </p>
 
 **DRAMA-Eval** is a comprehensive bilingual (English & Chinese) benchmark designed to evaluate context-aware, multi-turn, and multi-speaker speech generation systems. By utilizing structured script contexts grounded in real-world audio, it offers a holistic evaluation framework covering objective, local, and global aspects of generation quality.
+
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/054fc79f-fc5f-4f66-a059-8be2da307cf5" width="100%" controls="controls"></video>
+</p>
 
 ## 📖 Introduction
 
