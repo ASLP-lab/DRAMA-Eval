@@ -26,7 +26,7 @@
 
 <p align="center">
   <a href="https://huggingface.co/datasets/ASLP-lab/DRAMA-Eval/resolve/main/assets/video.mp4">
-    <img src="https://huggingface.co/datasets/ASLP-lab/DRAMA-Eval/resolve/main/assets/video.mp4" width="85%" controls="controls" alt="Click to watch Demo Video" width="85%">
+    <img src="https://img.shields.io/badge/🎬_Watch_Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Video" />
   </a>
 </p>
 
