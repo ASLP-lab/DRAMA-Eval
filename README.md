@@ -24,11 +24,7 @@
 
 **DRAMA-Eval** is a comprehensive bilingual (English & Chinese) benchmark designed to evaluate context-aware, multi-turn, and multi-speaker speech generation systems. By utilizing structured script contexts grounded in real-world audio, it offers a holistic evaluation framework covering objective, local, and global aspects of generation quality.
 
-<p align="center">
-  <a href="https://huggingface.co/datasets/ASLP-lab/DRAMA-Eval/resolve/main/assets/video.mp4">
-    <img src="https://img.shields.io/badge/🎬_Watch_Demo_Video-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Video" />
-  </a>
-</p>
+> 👉 **Click Here to Watch the DRAMA-Eval Demo Video 🎥 [<sup>1</sup>](https://huggingface.co/datasets/ASLP-lab/DRAMA-Eval/resolve/main/assets/video.mp4)**
 
 
 ## 📖 Introduction
