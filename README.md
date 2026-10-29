@@ -24,9 +24,11 @@
 
 **DRAMA-Eval** is a comprehensive bilingual (English & Chinese) benchmark designed to evaluate context-aware, multi-turn, and multi-speaker speech generation systems. By utilizing structured script contexts grounded in real-world audio, it offers a holistic evaluation framework covering objective, local, and global aspects of generation quality.
 
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/054fc79f-fc5f-4f66-a059-8be2da307cf5" width="100%" controls="controls"></video>
-</p>
+
+
+https://github.com/user-attachments/assets/70e9c2a6-508c-4cf1-9c52-15fc90414db2
+
+
 
 ## 📖 Introduction
 
