@@ -1,9 +1,5 @@
 
 
-
-
-
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6992d6ba-923e-4b10-9f3f-df41c64080f5" alt="DRAMA-Eval Logo" width="250"/>
 </p>
@@ -29,7 +25,7 @@
 
 
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/0e23e96a-d8a9-4bf7-9349-40d23e93b1df" width="800" controls></video>
+  <video src="https://github.com/user-attachments/assets/1ce3da94-0d49-475e-9333-165290896cc3" width="800" controls></video>
 </div>
 
 ## 📖 Introduction
