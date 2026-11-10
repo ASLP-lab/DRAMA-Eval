@@ -173,5 +173,6 @@ If you have any questions, suggestions, or would like to join our discussion gro
 You can also scan the QR code below with WeChat to add our assistant, and we will invite you to the **DRAMA-Eval Discussion Group**.
 
 <div align="center">
-  <img src="wechat_qr.png" alt="WeChat QR Code" width="200" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-top: 10px;">
+  <img src="wechat_qr.png<img width="792" height="683" alt="wechat_qr" src="https://github.com/user-attachments/assets/a0646cb7-b5c5-4f71-8acb-a29044be8e0c" />
+" alt="WeChat QR Code" width="200" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-top: 10px;">
 </div>
