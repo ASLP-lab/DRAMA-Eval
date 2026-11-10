@@ -1,5 +1,4 @@
 
-
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6992d6ba-923e-4b10-9f3f-df41c64080f5" alt="DRAMA-Eval Logo" width="250"/>
 </p>
@@ -20,6 +19,9 @@
     <img src="https://img.shields.io/badge/Demo-Webpage-blue.svg" alt="Demo">
   </a>
 </p>
+
+## 📢 News
+- **[2026-11-07]** We have updated the Leaderboard with **5 new models**: MOSS-TTS-2.0 Preview, Ming-3.0-tts-tiny, Ming-3.0-tts-0.5B, Qwen-Audio-3.1-TTS-Next, and Fun-CosyVoice3-0.5B. Check out the detailed comparison on our [Demo Page](https://ASLP-lab.github.io/DRAMA-Eval-Demo)!
 
 **DRAMA-Eval** is a comprehensive bilingual (English & Chinese) benchmark designed to evaluate context-aware, multi-turn, and multi-speaker speech generation systems. By utilizing structured script contexts grounded in real-world audio, it offers a holistic evaluation framework covering objective, local, and global aspects of generation quality.
 
@@ -160,3 +162,16 @@ If you find our dataset, codebase, or evaluation pipeline useful for your resear
   year={2026}
 }
 ```
+
+## 📬 Contact & Community
+
+If you have any questions, suggestions, or would like to join our discussion group, please feel free to contact us:
+
+- **Jingbin Hu**: [jingbin.hu@mail.nwpu.edu.cn](mailto:jingbin.hu@mail.nwpu.edu.cn)
+- **Zihang Yang**: [yangzihang@mail.nwpu.edu.cn](mailto:yangzihang@mail.nwpu.edu.cn)
+
+You can also scan the QR code below with WeChat to add our assistant, and we will invite you to the **DRAMA-Eval Discussion Group**.
+
+<div align="center">
+  <img src="wechat_qr.png" alt="WeChat QR Code" width="200" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-top: 10px;">
+</div>
