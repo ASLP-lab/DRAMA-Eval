@@ -1,4 +1,4 @@
-<img width="792" height="683" alt="wechat_qr" src="https://github.com/user-attachments/assets/75d575a9-d515-4280-92c9-b26258191380" />
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6992d6ba-923e-4b10-9f3f-df41c64080f5" alt="DRAMA-Eval Logo" width="250"/>
