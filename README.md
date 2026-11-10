@@ -172,5 +172,7 @@ If you have any questions, suggestions, or would like to join our discussion gro
 - **Zihang Yang**: [yangzihang@mail.nwpu.edu.cn](mailto:yangzihang@mail.nwpu.edu.cn)
 
 You can also scan the QR code below with WeChat to add our assistant, and we will invite you to the **DRAMA-Eval Discussion Group**.
-<div align="center"> <img src=""https://github.com/user-attachments/assets/a0646cb7-b5c5-4f71-8acb-a29044be8e0c" alt="WeChat QR Code" width="200" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-top: 10px;"> </div>
 
+<div align="center">
+  <img width="200" alt="wechat_qr" src="https://github.com/user-attachments/assets/75d575a9-d515-4280-92c9-b26258191380" style="border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-top: 10px;" />
+</div>
