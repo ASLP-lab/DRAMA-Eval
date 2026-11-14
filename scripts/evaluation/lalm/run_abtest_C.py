@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 import argparse, base64, json, time, sys, re, os
 import concurrent.futures as cf
 from pathlib import Path
@@ -19,14 +19,19 @@ def call_api(enc_a, enc_b, ctx, prompt_t, api_url, api_key, model_name):
     prompt = prompt_t + "\n<script_data>\n" + json.dumps(ctx, ensure_ascii=False) + "\n</script_data>"
     payload = {"model": model_name, "max_tokens": 8192, "temperature": 0.0, "top_p": 0.1,
                "messages": [{"role": "user", "content": [{"type": "text", "text": prompt}, {"type": "input_audio", "input_audio": {"data": enc_a, "format": "wav"}}, {"type": "text", "text": "Above is Audio A. Below is Audio B:"}, {"type": "input_audio", "input_audio": {"data": enc_b, "format": "wav"}}]}]}
+    
     for att in range(3):
         try:
             req = urllib.request.Request(api_url, data=json.dumps(payload).encode(), headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"})
-            res = json.loads(urllib.request.urlopen(req, timeout=300).read().decode())["choices"][0]["message"]["content"]
+            raw_res = urllib.request.urlopen(req, timeout=300).read().decode()
+            res = json.loads(raw_res)["choices"][0]["message"]["content"]
             res = res[res.find('{'):res.rfind('}')+1]
             return json.loads(re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f]', '', res), strict=False)
         except Exception as e:
-            if att == 2: raise e; time.sleep(5)
+            if att == 2: 
+                raise e
+            print(f"⚠️ API 报错 (尝试 {att+1}/3)，5秒后重试: {e}", file=sys.stderr)
+            time.sleep(5) # 修复了原版 sleep 逻辑
 
 def evaluate(task, args, prompt_t, gt_data_dict):
     utt, run_index = task
@@ -51,38 +56,40 @@ def evaluate(task, args, prompt_t, gt_data_dict):
             r_s = "GT" if w_s == "A" else ("Model" if w_s == "B" else "Tie")
             final_res[dim] = {"final_winner": r_n if (r_n == r_s and r_n != "Tie") else "Tie", "norm_winner": r_n, "swap_winner": r_s, "reasoning": res_norm.get(dim, {}).get("comparison_reasoning", "")}
         return {"utt": utt, "run_index": run_index, "status": "ok", "result": final_res}
-    except Exception as e: return {"utt": utt, "run_index": run_index, "status": "error", "error": str(e)[:100]}
+    except Exception as e: 
+        return {"utt": utt, "run_index": run_index, "status": "error", "error": str(e)[:100]}
 
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
-    p.add_argument("--jsonl", required=True)
+    # 修改点 1：取消 --jsonl 的必填
+    p.add_argument("--jsonl", required=False, help="Not used in C evaluation, kept for compatibility.")
     p.add_argument("--gt_jsonl", required=True)
     p.add_argument("--audio_dir_model", required=True)
     p.add_argument("--audio_dir_gt", required=True)
-    p.add_argument("--output", default="../../../results/metrics/lalm/global_eval_results.jsonl")
+    p.add_argument("--output", required=True)
     p.add_argument("--run_index", type=int, default=1)
-    p.add_argument("--concurrency", type=int, default=10)
-    p.add_argument("--api_url", default="https://generativelanguage.googleapis.com/v1beta/openai/chat/completions")
-    p.add_argument("--api_key", default="")
-    p.add_argument("--model_name", default="gemini-3.8-flash")
+    p.add_argument("--concurrency", type=int, default=5)
+    p.add_argument("--api_url", default="https://apim1.cheapapi.ai/v1/chat/completions")
+    p.add_argument("--api_key", required=True)
+    p.add_argument("--model_name", default="gemini-3.7-flash")
     args = p.parse_args()
     
-    if not args.api_key:
-        print("Error: Please provide --api_key or set the default value in the script.")
-        sys.exit(1)
-        
-    prompt_path = Path(__file__).parent / "prompts" / "abtest_prompt_C.txt"
+    prompt_path = Path("/PMAILAB/disk4/Drama-eval/evaluation/subjective/LLMv4/code/prompts/abtest_prompt_C.txt")
     prompt_t = prompt_path.read_text(encoding='utf-8')
     
     out_f = Path(args.output).resolve(); out_f.parent.mkdir(parents=True, exist_ok=True)
-    done = {norm_utt(json.loads(l)["utt"]) for l in open(out_f, encoding='utf-8') if json.loads(l).get("status")=="ok"} if out_f.exists() else set()
     
+    # 修改点 2：强制指定 encoding='utf-8' 防止读取报错
+    done = {norm_utt(json.loads(l)["utt"]) for l in open(out_f, encoding='utf-8') if json.loads(l).get("status")=="ok"} if out_f.exists() else set()
     gt_data = {norm_utt(json.loads(l)["utt"]): json.loads(l) for l in open(args.gt_jsonl, encoding='utf-8') if l.strip()}
     
     tasks = [(utt, args.run_index) for utt in gt_data.keys() if utt not in done]
     
     if tasks:
+        # 修改点 3：写入时强制指定 encoding='utf-8'
         with open(out_f, "a", encoding='utf-8') as f, cf.ThreadPoolExecutor(args.concurrency) as pool:
             for count, fut in enumerate(cf.as_completed([pool.submit(evaluate, t, args, prompt_t, gt_data) for t in tasks]), 1):
-                res = fut.result(); f.write(json.dumps(res, ensure_ascii=False) + "\n"); f.flush()
+                res = fut.result()
+                f.write(json.dumps(res, ensure_ascii=False) + "\n")
+                f.flush()
                 print(f"[{count}/{len(tasks)}] Global Run {args.run_index} | {res['utt']} -> {res['status']}", file=sys.stderr)
